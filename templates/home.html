@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3 " style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="static\assets\HILDA ADWUBI OSEI_GHANA_PHOTO.jpg" class="img-fluid rounded-start" alt="Hilda">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title text-center mt-5" style="font-family: serif; color: #f0860d;">Hello! I'm Hilda.</h1>
+        <p></p>
+        <p></p>
+        <p class="card-text" style="font-family: serif;">A computer scientist and an aspiring AI researcher passionate about building systems that solve real-world problems. My work sits at the intersection of machine learning, AI safety, optimization, and social impact, with a focus on areas like agriculture, climate, and equitable access. I'm driven by a vision to create intelligent solutions that are not only powerful, but fair, practical, and impactful in communities that need them most.</p>
+        <p>I'm an Alpharian! Everyday with God is everyday in Victory. Join Alphahour with Pastor Elvis Agyemang, 12am gmt!</p>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                <a class="link-info link-offset-2 link-underline link-underline-opacity-0" href="static\assets\resume_hilda_adwubi_osei (5).pdf"><i class="bi bi-file-earmark-pdf"></i>Download my academic CV (PDF) <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg></a>
+                </div>
+                <div class="col">
+                <a class="link-info link-offset-2 link-underline link-underline-opacity-0" href="{{url_for('projects')}}">Explore my projects and publications<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                </svg></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <br>
+<div class="hrdivider">
+  <hr/>
+  <span>Executive Highlights</span>
+</div>
+
+<br>
+
+  <div class="card">
+    <div class="card-body">
+        <div class="container text-center">
+        <div class="row">
+            <div class="col" style="max-width: 100%;">
+                <div class="card text-bg-light mb-3 border-info">
+                    <div class="card-body mx-0" style="max-width: 100%;">
+                        <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+                            <p>LATEST BREAKTHROUGH</p>
+                            </div>
+                            <div class="col">
+                            <p>ARXIV PREPRINT ON THE WAY!</p>
+                            </div>
+                        </div>
+                        </div>
+                        <h3>Waste Disposal & Health Outcomes: A Machine Learning Study in Atonsu, Kumasi</h3>
+                        <p>A field-data-driven study combining a Random Forest model predicting illness risk from waste disposal behavior (macro F1 = 0.70) with a MobileNetV2 image classifier for automated waste sorting (88% accuracy, macro F1 = 0.87). Built on real survey data from 8 sub-areas of Atonsu, Ghana, this work bridges public health and applied ML for waste management in emerging economies.</p>
+                        <a class="link-info link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://github.com/hildaadwubiosei/ATONSU-WASTE-PROJECT">CHECK CODE ON GITHUB <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg></a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row" style="height: max-content;">
+            <div class="col">
+                <div class="card text-bg-light mb-3 border-info" style="height: 100%;">
+                    <div class="card-body">
+                        <p>UPCOMING WORK</p>
+                        <h3>FarmDirect: ML-Driven Agricultural Marketplace Infrastructure</h3>
+                        <p>Building a farmer-to-buyer marketplace that eliminates middlemen using regression and clustering models for price optimization (22% RMSE improvement), validated through a 75-farmer pilot testing text vs. voice interfaces in Twi and English. Now expanding into supply chain and environmental data integration in collaboration with the Ghana Atomic Energy Commission.</p>
+                         <hr/>
+                        <p>Expected Publication: September 2026</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-light mb-3 border-info" style="height: 100%;">
+                    <div class="card-body">
+                        <p>GLOBAL IMPACT</p>
+                        <h3>Key Fellowships & Milestones</h3>
+                        <ul>
+                            <li>International "We, The Youth" Forum, Botswana & South Korea (1 of 150 selected from 27,000+ applicants)</li>
+                            <li>Leadership Diary Counselor, Youth Arise Organization, mentoring 100+ youth since 2020</li>
+                            <li>Completed a short course on Climate Change, Gender Equity and Inclusion in Partnership with the University of Ghana, Mastercard, and Africa Climate Collaborative</li>
+                        </ul>
+                        <hr/>
+                        Upcoming Opportunities : One Young World Summit
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+
+
+{% endblock %}
+
