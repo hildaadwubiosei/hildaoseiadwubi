@@ -1,32 +1,19 @@
 from flask import Flask, render_template, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 from forms import SubmitMessage
-from flask_mail import Message, Mail
 import os
-from dotenv import load_dotenv, find_dotenv
-
+from dotenv import load_dotenv
+import resend
 
 load_dotenv()
 
 app = Flask(__name__)
 
 email = os.getenv('EMAIL_')
-password = os.getenv('MY_PASSWORD')
-
-
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USE_TLS'] = False
-#app.config['MAIL_PORT'] = 587
-#app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = email
-app.config['MAIL_PASSWORD'] = password
-
+resend.api_key = os.getenv("RESEND_API_KEY")
 
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-mail = Mail(app)
 Bootstrap(app)
 
 
@@ -47,18 +34,19 @@ def experience():
 def projects():
     return render_template('projects.html')
 
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = SubmitMessage()
     if form.validate_on_submit():
-        msg = Message(
-            subject=f"I'm {form.name.data}, sent from your website",
-            sender=email,
-            recipients=["hildaosei109@gmail.com"],
-            reply_to=form.email.data,
-            body=f"From: {form.name.data} ({form.email.data})\n\n{form.message.data}"           
-        )
-        mail.send(msg)
+        resend.Emails.send({
+            "from": "onboarding@resend.dev",
+            "to": [email],
+            "reply_to": form.email.data,
+            "subject": f"New message from {form.name.data}",
+            "text": f"From: {form.name.data} ({form.email.data})\n\n{form.message.data}"
+        })
+        print("Sending to:", email)
         flash("Message successfully sent!", "success")
         return redirect(url_for('contact'))
     return render_template('contact.html', form=form)
